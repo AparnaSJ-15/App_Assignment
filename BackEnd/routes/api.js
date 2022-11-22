@@ -5,7 +5,7 @@ const DATA = require('../models/book')
 
 // get data from db
 
-router.get('/booklist', async (req, res) => {
+router.get('api/booklist', async (req, res) => {
 
     try {
 
@@ -21,7 +21,7 @@ router.get('/booklist', async (req, res) => {
 
 // get single data from db
 
-router.get('/book/:id', async (req, res) => {
+router.get('api/book/:id', async (req, res) => {
     try {
 
         let id = req.params.id
@@ -36,7 +36,7 @@ router.get('/book/:id', async (req, res) => {
 
 // send data from db
 
-router.post('/book', async (req, res) => {
+router.post('api/book', async (req, res) => {
     try {
 
         console.log(req.body)
@@ -60,7 +60,7 @@ router.post('/book', async (req, res) => {
 })
 
 // delete a employee data from db
-router.delete('/book/:id', async (req, res) => {
+router.delete('api/book/:id', async (req, res) => {
     try {
         let id = req.params.id
         const deleteBook = await DATA.findByIdAndDelete(id)
@@ -76,7 +76,7 @@ router.delete('/book/:id', async (req, res) => {
 // Update  a employee data from db
 
 
-router.put('/book', async (req, res) => {
+router.put('api/book', async (req, res) => {
     try {
 
         let id = req.body.id

@@ -5,19 +5,20 @@ import {HttpClient} from '@angular/common/http'
 })
 export class ApiService { 
   // apiUrl:String = 'http://localhost:8524/api'
+  apiUrl:String = 'api';
   constructor(private http :HttpClient) { }
-  apiUrl:String = 'http://localhost:8524/api'
+  // apiUrl:String = 'http://localhost:8524/api'
   //to fetch all data list
 getBookList(){
-  return this.http.get(`${this.apiUrl}/booklist`)
+  return this.http.get<any>(`${this.apiUrl}/booklist`)
 }
 
-// to delete student
+// to delete 
 deleteBook(id:any){
   return this.http.delete(`${this.apiUrl}/book/${id}`)
 }
 
-// to add new student 
+// to add new 
 
 addBook(data:any){
   return this.http.post(`${this.apiUrl}/book`, data)
@@ -25,16 +26,16 @@ addBook(data:any){
 }
 
 
-// to update existing student 
+// to update existing 
 updateBook(data:any, id:any){
   return this.http.post(`${this.apiUrl}/book`, {data,id})
 
 }
 
 
-// to fetch data of a single student 
+// to fetch data of single  
 
 getSingleBook(id:any){
-  return this.http.get(`${this.apiUrl}/book/${id}`)
+  return this.http.get<any>(`${this.apiUrl}/book/${id}`)
 }
 }
