@@ -1,0 +1,27 @@
+<div class="container pt-5">
+    <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">#</th>
+            <th scope="col">Name</th>
+            <th scope="col">Taken Date</th>
+            <th scope="col">Return Date</th>
+            <th scope="col">Action</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let book of books; let i= index">
+            <th scope="row">{{i+1}}</th>
+            <td>{{book.name}}</td>
+            <td>{{book.takenDate}}</td>
+            <td>{{book.returnDate}}</td>
+            <td> 
+                <button (click)="editBook()" type="button" class="btn btn-primary btn-sm">Edit</button> &nbsp;&nbsp;
+                <button (click)="deleteBook(book._id)" type="button" class="btn btn-primary btn-sm">Delete</button>
+            </td>
+
+          </tr>
+      
+        </tbody>
+      </table>
+</div>

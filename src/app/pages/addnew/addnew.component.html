@@ -1,0 +1,18 @@
+<div class="container pt-5">
+    <form [formGroup]="bookform" (ngSubmit)="onSubmit()">
+        <div class="mb-3">
+          <label for="exampleInputEmail1" class="form-label">Name</label>
+          <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" formControlName="name">
+        </div>
+        <div class="mb-3">
+          <label for="exampleInputPassword1" class="form-label">Taken Date</label>
+          <input  class="form-control" id="exampleInputPassword1" formControlName="takenDate">
+        </div>
+        <div class="mb-3">
+            <label for="exampleInputPassword1" class="form-label">Return Date</label>
+            <input  class="form-control" id="exampleInputPassword1" formControlName="returnDate">
+        </div>
+      
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+</div>
