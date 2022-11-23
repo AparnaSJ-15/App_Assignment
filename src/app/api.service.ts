@@ -10,7 +10,7 @@ export class ApiService {
   // apiUrl:String = 'http://localhost:8524/api'
   //to fetch all data list
 getBookList(){
-  return this.http.get<any>(`${this.apiUrl}/booklist`)
+  return this.http.get(`${this.apiUrl}/booklist`)
 }
 
 // to delete 
@@ -36,6 +36,6 @@ updateBook(data:any, id:any){
 // to fetch data of single  
 
 getSingleBook(id:any){
-  return this.http.get<any>(`${this.apiUrl}/book/${id}`)
+  return this.http.get(`${this.apiUrl}/book/${id}`)
 }
 }

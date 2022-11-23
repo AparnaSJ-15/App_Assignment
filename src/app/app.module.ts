@@ -12,6 +12,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { BooklistComponent } from './pages/booklist/booklist.component';
 import { AddnewComponent } from './pages/addnew/addnew.component';
 import { ApiService } from './api.service';
+import { LibrarayComponent } from './pages/libraray/libraray.component';
 
 
 
@@ -25,6 +26,7 @@ import { ApiService } from './api.service';
     LoginComponent,
     BooklistComponent,
     AddnewComponent,
+    LibrarayComponent,
   ],
   imports: [
     BrowserModule,

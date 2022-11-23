@@ -17,6 +17,10 @@ export class HomeComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  library(){
+    this.router.navigate(['/library'])
+  }
+
   signup(){
     this.router.navigate(['/signup'])
   }
@@ -26,7 +30,7 @@ export class HomeComponent implements OnInit {
   }
 
   logout(){
-    this.router.navigate([''])
+    this.router.navigate(['/library'])
   }
 
 }

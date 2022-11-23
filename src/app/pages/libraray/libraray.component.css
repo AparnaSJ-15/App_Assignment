@@ -1,0 +1,11 @@
+.mainheading{
+    background-color: palevioletred;
+    color: navy;
+    width: 20cm;
+    height: 2cm;
+    text-align: center;
+    border-radius: 25px;
+    margin-top: 8cm;
+    margin-left: 10cm;
+    padding: 12px;
+}
