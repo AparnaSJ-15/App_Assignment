@@ -30,7 +30,7 @@ export class HomeComponent implements OnInit {
   }
 
   logout(){
-    this.router.navigate(['/library'])
+    this.router.navigate([''])
   }
 
 }

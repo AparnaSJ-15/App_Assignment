@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
   }
   userverify(){
     alert('Successfully Logged In')
-    this.router.navigate(['/main'])
+    this.router.navigate(['/booklist'])
   }
 
 }

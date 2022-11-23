@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
 
 @Component({
@@ -8,7 +9,7 @@ import { ApiService } from 'src/app/api.service';
 })
 export class BooklistComponent implements OnInit {
 
-  constructor(private apiService :ApiService) { }
+  constructor(private apiService :ApiService, private router: Router) { }
   books:any =[]
   ngOnInit(): void {
     this.getData();
@@ -29,7 +30,7 @@ export class BooklistComponent implements OnInit {
     this.apiService.deleteBook(id).subscribe(res=>{
       this.books = res;
       alert('Succesfully Deleted')
-    })
-
+    })  
+    this.router.navigate(['/booklist'])
 }
 }

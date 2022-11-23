@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 
 import { FormGroup, FormControl, Validators } from '@angular/forms'
 import { ApiService } from 'src/app/api.service';
-
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-addnew',
@@ -17,7 +17,7 @@ export class AddnewComponent implements OnInit {
     'returnDate': new FormControl('')
   })
 
-  constructor(private api: ApiService) { }
+  constructor(private api: ApiService, private router: Router) { }
 
   ngOnInit(): void {
   }
@@ -29,7 +29,7 @@ export class AddnewComponent implements OnInit {
       }
     }
     )
-
+    this.router.navigate(['/booklist'])
   }
 
 }
