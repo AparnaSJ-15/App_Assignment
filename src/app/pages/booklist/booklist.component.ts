@@ -31,6 +31,7 @@ export class BooklistComponent implements OnInit {
       this.books = res;
       alert('Succesfully Deleted')
     })  
-    this.router.navigate(['/booklist'])
+    // this.router.navigate(['/booklist'])
+    
 }
 }
