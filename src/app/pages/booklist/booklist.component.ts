@@ -10,28 +10,37 @@ import { ApiService } from 'src/app/api.service';
 export class BooklistComponent implements OnInit {
 
   constructor(private apiService :ApiService, private router: Router) { }
-  books:any =[]
+  books:any =[];
+
   ngOnInit(): void {
     this.getData();
   }
-
   getData(){
     this.apiService.getBookList().subscribe(res=>{
       this.books = res
     })
   }
 
-  editBook(){
+  // editBook(){
     // this.apiService.updateBook(data,id).subscribe(res=>{
     //   this.books = res
     // })
+  // }
+
+  editBook(){
+
   }
+
+  refresh(): void {
+    window.location.reload();
+  }
+
   deleteBook(id:any){
     this.apiService.deleteBook(id).subscribe(res=>{
       this.books = res;
       alert('Succesfully Deleted')
-    })  
-    // this.router.navigate(['/booklist'])
-    
+      this.refresh(); 
+  })
+    // this.refresh();   
 }
 }

@@ -22,10 +22,15 @@ export class AddnewComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  refresh(): void {
+    window.location.reload();
+  }
+
   onSubmit() {
     this.api.addBook(this.bookform.value).subscribe({
       complete: () => {
         alert('data saved successfully')
+        this.refresh();
       }
     }
     )
