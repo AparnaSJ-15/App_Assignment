@@ -42,7 +42,6 @@ export class BooklistComponent implements OnInit {
       this.books = res;
       alert('Succesfully Deleted')
       this.refresh(); 
-  })
-    // this.refresh();   
+  })   
 }
 }
