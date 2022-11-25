@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { ApiService } from 'src/app/api.service';
+import { __values } from 'tslib';
 
 @Component({
   selector: 'app-booklist',
@@ -11,13 +12,14 @@ export class BooklistComponent implements OnInit {
 
   constructor(private apiService :ApiService, private router: Router) { }
   books:any =[];
+  bookform:any
 
   ngOnInit(): void {
     this.getData();
   }
   getData(){
     this.apiService.getBookList().subscribe(res=>{
-      this.books = res
+      this.books = res;
     })
   }
 
@@ -27,8 +29,8 @@ export class BooklistComponent implements OnInit {
     // })
   // }
 
-  editBook(){
-
+  editBook(id:String){
+    this.router.navigate(['/addnew']);
   }
 
   refresh(): void {

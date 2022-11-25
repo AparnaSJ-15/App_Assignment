@@ -15,7 +15,7 @@
     <table class="table">
         <thead>
           <tr>
-            <th scope="col">#</th>
+            <th scope="col">No:-</th>
             <th scope="col">Name</th>
             <th scope="col">Taken Date</th>
             <th scope="col">Return Date</th>
@@ -29,7 +29,7 @@
             <td>{{book.takenDate}}</td>
             <td>{{book.returnDate}}</td>
             <td> 
-                <button (click)="editBook()" type="button" class="btn btn-primary btn-sm">Edit</button> &nbsp;&nbsp;
+                <button (click)="editBook(book._id)" type="button" class="btn btn-primary btn-sm">Edit</button> &nbsp;&nbsp;
                 <button (click)="deleteBook(book._id)" type="button" class="btn btn-primary btn-sm">Delete</button>
             </td>
 
